@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF232DD31AC443DD00CD600F /* DateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF232DD21AC443DD00CD600F /* DateTableViewController.swift */; };
 		BF4D62BE1AC028BB0024DDAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4D62BD1AC028BB0024DDAC /* AppDelegate.swift */; };
-		BF4D62C01AC028BB0024DDAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4D62BF1AC028BB0024DDAC /* ViewController.swift */; };
 		BF4D62C31AC028BB0024DDAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4D62C11AC028BB0024DDAC /* Main.storyboard */; };
 		BF4D62C51AC028BB0024DDAC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4D62C41AC028BB0024DDAC /* Images.xcassets */; };
 		BF4D62C81AC028BB0024DDAC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4D62C61AC028BB0024DDAC /* LaunchScreen.xib */; };
 		BF4D62D41AC028BB0024DDAC /* WorkTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4D62D31AC028BB0024DDAC /* WorkTimerTests.swift */; };
+		BF4D62DE1AC069940024DDAC /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4D62DD1AC069940024DDAC /* CalendarModel.swift */; };
+		BFC4E3A41AC094880049EAAB /* EKEventExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E3A31AC094880049EAAB /* EKEventExtension.swift */; };
+		BFC4E3A71AC1B57B0049EAAB /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC4E3A61AC1B57B0049EAAB /* NSDateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +29,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF232DD21AC443DD00CD600F /* DateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTableViewController.swift; sourceTree = "<group>"; };
 		BF4D62B81AC028BB0024DDAC /* WorkTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4D62BC1AC028BB0024DDAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF4D62BD1AC028BB0024DDAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF4D62BF1AC028BB0024DDAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BF4D62C21AC028BB0024DDAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF4D62C41AC028BB0024DDAC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BF4D62C71AC028BB0024DDAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BF4D62CD1AC028BB0024DDAC /* WorkTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4D62D21AC028BB0024DDAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF4D62D31AC028BB0024DDAC /* WorkTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTimerTests.swift; sourceTree = "<group>"; };
+		BF4D62DD1AC069940024DDAC /* CalendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
+		BFC4E3A31AC094880049EAAB /* EKEventExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EKEventExtension.swift; path = ../EKEventExtension.swift; sourceTree = "<group>"; };
+		BFC4E3A51AC09B770049EAAB /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		BFC4E3A61AC1B57B0049EAAB /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +66,7 @@
 		BF4D62AF1AC028BB0024DDAC = {
 			isa = PBXGroup;
 			children = (
+				BFC4E3A51AC09B770049EAAB /* MyPlayground.playground */,
 				BF4D62BA1AC028BB0024DDAC /* WorkTimer */,
 				BF4D62D01AC028BB0024DDAC /* WorkTimerTests */,
 				BF4D62B91AC028BB0024DDAC /* Products */,
@@ -77,12 +85,14 @@
 		BF4D62BA1AC028BB0024DDAC /* WorkTimer */ = {
 			isa = PBXGroup;
 			children = (
+				BFC4E3A81AC1B6A50049EAAB /* Extensions */,
 				BF4D62BD1AC028BB0024DDAC /* AppDelegate.swift */,
-				BF4D62BF1AC028BB0024DDAC /* ViewController.swift */,
 				BF4D62C11AC028BB0024DDAC /* Main.storyboard */,
 				BF4D62C41AC028BB0024DDAC /* Images.xcassets */,
 				BF4D62C61AC028BB0024DDAC /* LaunchScreen.xib */,
 				BF4D62BB1AC028BB0024DDAC /* Supporting Files */,
+				BF4D62DD1AC069940024DDAC /* CalendarModel.swift */,
+				BF232DD21AC443DD00CD600F /* DateTableViewController.swift */,
 			);
 			path = WorkTimer;
 			sourceTree = "<group>";
@@ -110,6 +120,15 @@
 				BF4D62D21AC028BB0024DDAC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFC4E3A81AC1B6A50049EAAB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFC4E3A31AC094880049EAAB /* EKEventExtension.swift */,
+				BFC4E3A61AC1B57B0049EAAB /* NSDateExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +231,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF4D62C01AC028BB0024DDAC /* ViewController.swift in Sources */,
+				BF232DD31AC443DD00CD600F /* DateTableViewController.swift in Sources */,
+				BFC4E3A71AC1B57B0049EAAB /* NSDateExtension.swift in Sources */,
+				BF4D62DE1AC069940024DDAC /* CalendarModel.swift in Sources */,
 				BF4D62BE1AC028BB0024DDAC /* AppDelegate.swift in Sources */,
+				BFC4E3A41AC094880049EAAB /* EKEventExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +427,7 @@
 				BF4D62D91AC028BB0024DDAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF4D62DA1AC028BB0024DDAC /* Build configuration list for PBXNativeTarget "WorkTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +436,7 @@
 				BF4D62DC1AC028BB0024DDAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
