@@ -11,7 +11,7 @@ import Foundation
 
 class DateTableViewController: UITableViewController {
 
-    let model : CalendarModel = CalendarModel(name: "Arbeit")
+    let model : CalendarModel = CalendarModel(name: "NextBike")
     var eventStore = EKEventStore()
     
     override func viewDidLoad() {
@@ -80,8 +80,13 @@ class DateTableViewController: UITableViewController {
         return "Woche \(woche)"
     }
     override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        let wochenStunden = model.workedHourByArrayIndex(section)
-        return wochenStunden > 0  ? String(format:"%.1f Stunden",wochenStunden) : ""
+        let wochenStunden = model.getWorkedhoursForIndex(section)
+        let ueberStunden = model.getOverhoursForIndex(section)
+        let ueberStundenBis = model.getOverhoursUntilWeek(section)
+        return String(format:       "%.1f Stunden \n"
+                                +   "%.1f Überstunden diesen Monat \n"
+                                +   "%.1f Überstunden total"
+            ,wochenStunden, ueberStunden, ueberStundenBis)
 
     }
     
