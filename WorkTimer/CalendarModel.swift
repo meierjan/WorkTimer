@@ -23,12 +23,15 @@ class CalendarModel {
         loadCalendar()
     }
     
+    // constants
+    static let workingHoursPerWeek : Double  =  8.0
+    
     // will be the name even if it doesnt exist
     private var calendarName : String
     
     private var eventStore = EKEventStore()
     private var calendar : EKCalendar!
-    private let workingHoursPerWeek : Double  = 8.0
+
     
     private var events = [EKEvent]()
     private var eventsAsWeekDict = [Int: [EKEvent]]()
@@ -139,8 +142,6 @@ class CalendarModel {
     }
 
     private func loadCalendar() {
-        
-        
         let calendars = self.eventStore.calendarsForEntityType(EKEntityTypeEvent) as! [EKCalendar]
         for cal in calendars { // (should be using identifier)
             if cal.title == calendarName {
@@ -167,7 +168,7 @@ class CalendarModel {
     
     private func overHoursByArrayIndex(let index: Int) -> Double {
         let workedHours = self.workedHoursByArrayIndex(index)
-        return workedHours - self.workingHoursPerWeek
+        return workedHours - CalendarModel.workingHoursPerWeek
     }
     
 }

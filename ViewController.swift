@@ -20,17 +20,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: "refresh:", forControlEvents: .ValueChanged)
-        tableView.addSubview(refreshControl)
-        
         eventStore.requestAccessToEntityType(EKEntityTypeEvent,
             completion: {(granted: Bool, error:NSError!) in
                 if !granted {
                     println("Access to store not granted")
                 }
         })
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: "reloadEventData:", forControlEvents: .ValueChanged)
+        tableView.addSubview(refreshControl)
     }
     
     override func didReceiveMemoryWarning() {
@@ -77,10 +78,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let wochenStunden = model.getWorkedhoursForIndex(section)
         let ueberStunden = model.getOverhoursForIndex(section)
         let ueberStundenBis = model.getOverhoursUntilWeek(section)
-        return String(format:       "%.1f Stunden \n"
-            +   "%.1f Überstunden diesen Monat \n"
+        return String(format:
+                "%.1f Stunden \n"
+            +   "%.1f Überstunden diese Woche \n"
             +   "%.1f Überstunden total"
-            ,wochenStunden, ueberStunden, ueberStundenBis)
+            , wochenStunden, ueberStunden, ueberStundenBis)
         
     }
 
