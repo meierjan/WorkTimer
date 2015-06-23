@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "7rj-Lv-VRf"; */
+"7rj-Lv-VRf.text" = "Title";
+
+/* Class = "UITableViewController"; title = "DateTableViewController"; ObjectID = "t5G-Ix-AkN"; */
+"t5G-Ix-AkN.title" = "DateTableViewController";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "wK1-hG-Vr8"; */
+"wK1-hG-Vr8.text" = "Subtitle";

@@ -11,13 +11,6 @@ import Foundation
 
 class CalendarModel {
     
-    // will be the name even if it doesnt exist
-    private var calendarName : String
-    
-    private var eventStore = EKEventStore()
-    private var calendar : EKCalendar!
-    private let workingHoursPerWeek : Double  = 8.0
-    
     struct DateConstants {
         let startDate   =   NSDate(timeIntervalSinceNow: -60*60*24*365)
         let endDate     =   NSDate().dateByAddingTimeInterval(60*60*24*3)
@@ -30,12 +23,19 @@ class CalendarModel {
         loadCalendar()
     }
     
-    var events = [EKEvent]()
-    var eventsAsWeekDict = [Int: [EKEvent]]()
+    // will be the name even if it doesnt exist
+    private var calendarName : String
     
-    var workedHoursPerWeek = [Double]()
-    var workedOverHoursPerWeek = [Double]()
-    var totalOverHoursUntilWeek = [Double]()
+    private var eventStore = EKEventStore()
+    private var calendar : EKCalendar!
+    private let workingHoursPerWeek : Double  = 8.0
+    
+    private var events = [EKEvent]()
+    private var eventsAsWeekDict = [Int: [EKEvent]]()
+    
+    private var workedHoursPerWeek = [Double]()
+    private var workedOverHoursPerWeek = [Double]()
+    private var totalOverHoursUntilWeek = [Double]()
 
     
     
@@ -53,6 +53,8 @@ class CalendarModel {
         }
     }
     
+    
+    // MARK: Public API
     func getOverhoursForIndex(index: Int) -> Double {
         return workedOverHoursPerWeek[index]
     }
@@ -83,11 +85,11 @@ class CalendarModel {
         }
     }
     
-    func reloadEvents() {
+    
+    // MARK: - Non-public API
+    private func reloadEvents() {
         loadCalendar()
     }
-
-    // MARK: - Non-public API
     
     private func loadEvents() {
         let constants = DateConstants()

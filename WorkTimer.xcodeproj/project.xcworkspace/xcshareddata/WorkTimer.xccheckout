@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C8C483FE-243B-4750-BA4E-8861B1643F21</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WorkTimer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AEB85C724F67E2DA041312867B0C3F12DAEF6C4A</key>
+		<string>github.com:meierjan/WorkTimer.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WorkTimer.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AEB85C724F67E2DA041312867B0C3F12DAEF6C4A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:meierjan/WorkTimer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AEB85C724F67E2DA041312867B0C3F12DAEF6C4A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AEB85C724F67E2DA041312867B0C3F12DAEF6C4A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WorkTimer</string>
+		</dict>
+	</array>
+</dict>
+</plist>
