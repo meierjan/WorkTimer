@@ -9,14 +9,11 @@
 import UIKit
 import EventKitUI
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class ViewController: UITableViewController
 {
-    
-    @IBOutlet weak var tableView: UITableView!
-    
-    let model : CalendarModel = CalendarModel(name: "NextBike")
-    var eventStore = EKEventStore()
-    
+
+    private let model : CalendarModel = CalendarModel(name: "NextBike")
+    private var eventStore = EKEventStore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +23,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     println("Access to store not granted")
                 }
         })
+        self.setNavbarStyle()
     }
     
     override func viewDidAppear(animated: Bool) {
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: "reloadEventData:", forControlEvents: .ValueChanged)
-        tableView.addSubview(refreshControl)
+        super.viewDidAppear(animated)
+        var refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: Selector("refreshTableViewContent"), forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl = refreshControl
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,25 +40,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prefersStatusBarHidden() -> Bool {
         return false
     }
-    
-    func reloadEventData() {
-        //model.reloadEvents()
-        self.tableView.reloadData()
-        //refreshControl.endRefreshing()
-    }
-    
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return model.weekSpan
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let (_, e) = model.eventWeekByArrayIndex(section)
         return  e?.count ?? 0;
     }
     
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("DataCell") as! UITableViewCell
         let (_,parentItem) = model.eventWeekByArrayIndex(indexPath.section)
         let  item = parentItem![indexPath.row]
@@ -69,12 +60,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let (woche, _ ) = model.eventWeekByArrayIndex(section)
         return "Woche \(woche)"
     }
     
-    func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+    override func tableView(tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         let wochenStunden = model.getWorkedhoursForIndex(section)
         let ueberStunden = model.getOverhoursForIndex(section)
         let ueberStundenBis = model.getOverhoursUntilWeek(section)
@@ -86,8 +77,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
 
+    // MARK: public functions
+    func refreshTableViewContent() {
+        self.model.reloadEvents()
+        self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
+    }
+    
+    // MARK: private helper functions
     private func sectionIdToWeekNumber(let sectionId: Int) -> Int {
         return sectionId + 0
+    }
+    
+    private func setNavbarStyle() {
+        if let nav = self.navigationController?.navigationBar {
+            nav.barTintColor = UIColor(red: 67/255, green: 49/255, blue: 117/255, alpha:1)
+            nav.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        }
     }
     
 }

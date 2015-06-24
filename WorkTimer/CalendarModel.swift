@@ -31,7 +31,6 @@ class CalendarModel {
     
     private var eventStore = EKEventStore()
     private var calendar : EKCalendar!
-
     
     private var events = [EKEvent]()
     private var eventsAsWeekDict = [Int: [EKEvent]]()
@@ -40,8 +39,6 @@ class CalendarModel {
     private var workedOverHoursPerWeek = [Double]()
     private var totalOverHoursUntilWeek = [Double]()
 
-    
-    
     var startWeek : Int?
     var lastWeek : Int?
   
@@ -55,7 +52,6 @@ class CalendarModel {
             return 0;
         }
     }
-    
     
     // MARK: Public API
     func getOverhoursForIndex(index: Int) -> Double {
@@ -88,11 +84,12 @@ class CalendarModel {
         }
     }
     
-    
-    // MARK: - Non-public API
-    private func reloadEvents() {
+    func reloadEvents() {
         loadCalendar()
     }
+    
+    // MARK: - Non-public API
+    
     
     private func loadEvents() {
         let constants = DateConstants()
@@ -151,7 +148,6 @@ class CalendarModel {
             }
         }
         calendar = nil
-        
     }
     
     private func eventsFromCalendarForTimeSpan(let #startDate: NSDate, let endDate: NSDate) -> [EKEvent] {
