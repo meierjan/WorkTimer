@@ -41,7 +41,6 @@
 		BF4D62D31AC028BB0024DDAC /* WorkTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkTimerTests.swift; sourceTree = "<group>"; };
 		BF4D62DD1AC069940024DDAC /* CalendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
 		BFC4E3A31AC094880049EAAB /* EKEventExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EKEventExtension.swift; path = ../EKEventExtension.swift; sourceTree = "<group>"; };
-		BFC4E3A51AC09B770049EAAB /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		BFC4E3A61AC1B57B0049EAAB /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,7 +65,6 @@
 		BF4D62AF1AC028BB0024DDAC = {
 			isa = PBXGroup;
 			children = (
-				BFC4E3A51AC09B770049EAAB /* MyPlayground.playground */,
 				BF4D62BA1AC028BB0024DDAC /* WorkTimer */,
 				BF4D62D01AC028BB0024DDAC /* WorkTimerTests */,
 				BF4D62B91AC028BB0024DDAC /* Products */,
