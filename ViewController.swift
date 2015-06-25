@@ -9,6 +9,7 @@
 import UIKit
 import EventKitUI
 
+
 class ViewController: UITableViewController
 {
 
@@ -76,6 +77,23 @@ class ViewController: UITableViewController
             , wochenStunden, ueberStunden, ueberStundenBis)
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        let indexPath = sender?.indexPath
+        if let segueName = sender?.identifier {
+            switch segueName {
+                case "showDateDetail":
+                    let destinationViewController = segue.destinationViewController as! DateDetailViewController
+                    let (_,parentItem) = model.eventWeekByArrayIndex(indexPath!.section)
+                    let  item = parentItem![indexPath!.row]
+                    destinationViewController.setEventForDate(item)
+            default:
+                NSLog("Segue nicht gefunden")
+            }
+        }
+        
+    }
 
     // MARK: public functions
     func refreshTableViewContent() {
@@ -92,7 +110,6 @@ class ViewController: UITableViewController
     private func setNavbarStyle() {
         if let nav = self.navigationController?.navigationBar {
             nav.barTintColor = UIColor(red: 67/255, green: 49/255, blue: 117/255, alpha:1)
-            nav.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         }
     }
     

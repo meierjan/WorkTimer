@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF2574A91B3C2EED00478136 /* DateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2574A81B3C2EED00478136 /* DateDetailViewController.swift */; };
+		BF2574AA1B3C2EED00478136 /* DateDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2574A81B3C2EED00478136 /* DateDetailViewController.swift */; };
 		BF2E9B0C1B38C1EB003C9863 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2E9B0B1B38C1EB003C9863 /* ViewController.swift */; };
 		BF4D62BE1AC028BB0024DDAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4D62BD1AC028BB0024DDAC /* AppDelegate.swift */; };
 		BF4D62C31AC028BB0024DDAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4D62C11AC028BB0024DDAC /* Main.storyboard */; };
@@ -29,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF2574A81B3C2EED00478136 /* DateDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateDetailViewController.swift; sourceTree = "<group>"; };
 		BF2E9B0B1B38C1EB003C9863 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
 		BF4D62B81AC028BB0024DDAC /* WorkTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4D62BC1AC028BB0024DDAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 				BF4D62DD1AC069940024DDAC /* CalendarModel.swift */,
 				BF2E9B0B1B38C1EB003C9863 /* ViewController.swift */,
 				BF4D62BB1AC028BB0024DDAC /* Supporting Files */,
+				BF2574A81B3C2EED00478136 /* DateDetailViewController.swift */,
 			);
 			path = WorkTimer;
 			sourceTree = "<group>";
@@ -234,6 +238,7 @@
 				BF4D62BE1AC028BB0024DDAC /* AppDelegate.swift in Sources */,
 				BF2E9B0C1B38C1EB003C9863 /* ViewController.swift in Sources */,
 				BFC4E3A41AC094880049EAAB /* EKEventExtension.swift in Sources */,
+				BF2574A91B3C2EED00478136 /* DateDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4D62D41AC028BB0024DDAC /* WorkTimerTests.swift in Sources */,
+				BF2574AA1B3C2EED00478136 /* DateDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
