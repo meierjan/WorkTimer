@@ -46,11 +46,33 @@
                             <outlet property="delegate" destination="t5G-Ix-AkN" id="Tdg-dg-w9W"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Arbeitszeiten" image="Calendar.png" id="gd7-Qc-7Qp">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Arbeitszeit" id="CRH-Z7-bFF"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1I-OC-4ER" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1087" y="-132"/>
+            <point key="canvasLocation" x="883" y="-278"/>
+        </scene>
+        <!--Einstellungen-->
+        <scene sceneID="pR2-km-5DZ">
+            <objects>
+                <viewController id="2ex-wv-klI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wql-ZW-IfS"/>
+                        <viewControllerLayoutGuide type="bottom" id="fkP-S4-MMR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GAO-qB-qPv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Einstellungen" image="Settings.png" id="IqW-BO-Ufm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EQ5-5k-qYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="640"/>
         </scene>
         <!--Date Detail View Controller-->
         <scene sceneID="zcn-At-ooa">
@@ -63,13 +85,52 @@
                     <view key="view" contentMode="scaleToFill" id="p00-NW-pd4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V89-wm-EyT">
+                                <rect key="frame" x="16" y="72" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycb-mi-SIF">
+                                <rect key="frame" x="16" y="101" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7o-7W-V2G">
+                                <rect key="frame" x="16" y="130" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wrS-Wb-SpB">
+                                <rect key="frame" x="16" y="159" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5s-45-eIE">
+                                <rect key="frame" x="16" y="188" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I7v-Nc-fbz">
+                                <rect key="frame" x="16" y="217" width="561" height="212"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="fAQ-kd-6dl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wh4-z3-1fk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1840" y="-132"/>
+            <point key="canvasLocation" x="1808" y="-278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g1g-Ar-j4w">
@@ -82,13 +143,37 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="t5G-Ix-AkN" kind="relationship" relationship="rootViewController" id="hdJ-dV-Fwm"/>
+                        <segue destination="O8g-C5-T9E" kind="relationship" relationship="rootViewController" id="AfF-40-1bA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Tt-DL-cUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="233" y="-132"/>
+            <point key="canvasLocation" x="-698" y="-284"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Rp9-uo-vyp">
+            <objects>
+                <tabBarController id="O8g-C5-T9E" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5v0-Jt-iRi"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="tcU-hB-TEm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="t5G-Ix-AkN" kind="relationship" relationship="viewControllers" id="DnY-Vr-Rhg"/>
+                        <segue destination="2ex-wv-klI" kind="relationship" relationship="viewControllers" id="rz4-1V-V96"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RWp-c7-LQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="-278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Calendar.png" width="30" height="30"/>
+        <image name="Settings.png" width="30" height="30"/>
+    </resources>
     <color key="tintColor" red="0.9893475035" green="1" blue="0.96676682629999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>
