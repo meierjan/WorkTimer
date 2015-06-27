@@ -22,6 +22,7 @@
 		BFF4AF3B1B3CE43200CF9F09 /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF4AF371B3CE43200CF9F09 /* Settings@2x.png */; };
 		BFF4AF3C1B3CE43200CF9F09 /* Calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF4AF381B3CE43200CF9F09 /* Calendar.png */; };
 		BFF4AF3D1B3CE43200CF9F09 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF4AF391B3CE43200CF9F09 /* Settings.png */; };
+		BFF4AF441B3CE60800CF9F09 /* BaseballCap.png in Resources */ = {isa = PBXBuildFile; fileRef = BFF4AF431B3CE60800CF9F09 /* BaseballCap.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,11 @@
 		BFF4AF371B3CE43200CF9F09 /* Settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings@2x.png"; sourceTree = "<group>"; };
 		BFF4AF381B3CE43200CF9F09 /* Calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar.png; sourceTree = "<group>"; };
 		BFF4AF391B3CE43200CF9F09 /* Settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Settings.png; sourceTree = "<group>"; };
+		BFF4AF3E1B3CE4C600CF9F09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		BFF4AF3F1B3CE59E00CF9F09 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		BFF4AF401B3CE59E00CF9F09 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		BFF4AF421B3CE5C000CF9F09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		BFF4AF431B3CE60800CF9F09 /* BaseballCap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BaseballCap.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,10 +151,11 @@
 		BFF4AF291B3CE2B300CF9F09 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BFF4AF431B3CE60800CF9F09 /* BaseballCap.png */,
+				BFF4AF391B3CE43200CF9F09 /* Settings.png */,
 				BFF4AF361B3CE43200CF9F09 /* Calendar@2x.png */,
 				BFF4AF371B3CE43200CF9F09 /* Settings@2x.png */,
 				BFF4AF381B3CE43200CF9F09 /* Calendar.png */,
-				BFF4AF391B3CE43200CF9F09 /* Settings.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -237,6 +244,7 @@
 				BFF4AF3C1B3CE43200CF9F09 /* Calendar.png in Resources */,
 				BFF4AF3D1B3CE43200CF9F09 /* Settings.png in Resources */,
 				BFF4AF3B1B3CE43200CF9F09 /* Settings@2x.png in Resources */,
+				BFF4AF441B3CE60800CF9F09 /* BaseballCap.png in Resources */,
 				BF4D62C81AC028BB0024DDAC /* LaunchScreen.xib in Resources */,
 				BFF4AF3A1B3CE43200CF9F09 /* Calendar@2x.png in Resources */,
 				BF4D62C51AC028BB0024DDAC /* Images.xcassets in Resources */,
@@ -290,6 +298,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				BF4D62C21AC028BB0024DDAC /* Base */,
+				BFF4AF3E1B3CE4C600CF9F09 /* en */,
+				BFF4AF3F1B3CE59E00CF9F09 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -298,6 +308,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				BF4D62C71AC028BB0024DDAC /* Base */,
+				BFF4AF401B3CE59E00CF9F09 /* de */,
+				BFF4AF421B3CE5C000CF9F09 /* en */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

@@ -1,0 +1,36 @@
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "7rj-Lv-VRf"; */
+"7rj-Lv-VRf.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Arbeitszeit"; ObjectID = "CRH-Z7-bFF"; */
+"CRH-Z7-bFF.title" = "Arbeitszeit";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "I7v-Nc-fbz"; */
+"I7v-Nc-fbz.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UITabBarItem"; title = "Einstellungen"; ObjectID = "IqW-BO-Ufm"; */
+"IqW-BO-Ufm.title" = "Einstellungen";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "R7o-7W-V2G"; */
+"R7o-7W-V2G.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "V89-wm-EyT"; */
+"V89-wm-EyT.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ycb-mi-SIF"; */
+"Ycb-mi-SIF.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Z5s-45-eIE"; */
+"Z5s-45-eIE.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Arbeitszeiten"; ObjectID = "gd7-Qc-7Qp"; */
+"gd7-Qc-7Qp.title" = "Arbeitszeiten";
+
+/* Class = "UITableViewController"; title = "DateTableViewController"; ObjectID = "t5G-Ix-AkN"; */
+"t5G-Ix-AkN.title" = "DateTableViewController";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "wK1-hG-Vr8"; */
+"wK1-hG-Vr8.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "wrS-Wb-SpB"; */
+"wrS-Wb-SpB.text" = "Label";
