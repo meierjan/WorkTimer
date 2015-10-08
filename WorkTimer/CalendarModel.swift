@@ -95,7 +95,7 @@ class CalendarModel {
         let constants = DateConstants()
         let eventList = eventsFromCalendarForTimeSpan(startDate: constants.startDate, endDate: constants.endDate)
         events = eventList
-        events.sort({ (event1:EKEvent, event2:EKEvent) -> Bool in
+        events.sortInPlace({ (event1:EKEvent, event2:EKEvent) -> Bool in
             return event1.weekNumber < event2.weekNumber
         })
         
@@ -110,7 +110,7 @@ class CalendarModel {
         eventsAsWeekDict = [Int: [EKEvent]]()
         
         
-        for (i, event) in enumerate(events) {
+        for (i, event) in events.enumerate() {
 
             let indexInArray = event.weekNumber - startWeek!
             if eventsAsWeekDict[event.weekNumber] == nil {
@@ -139,7 +139,7 @@ class CalendarModel {
     }
 
     private func loadCalendar() {
-        let calendars = self.eventStore.calendarsForEntityType(EKEntityTypeEvent) as! [EKCalendar]
+        let calendars = self.eventStore.calendarsForEntityType(EKEntityType.Event) 
         for cal in calendars { // (should be using identifier)
             if cal.title == calendarName {
                 calendar = cal
@@ -150,9 +150,9 @@ class CalendarModel {
         calendar = nil
     }
     
-    private func eventsFromCalendarForTimeSpan(let #startDate: NSDate, let endDate: NSDate) -> [EKEvent] {
+    private func eventsFromCalendarForTimeSpan(let startDate startDate: NSDate, let endDate: NSDate) -> [EKEvent] {
         let predicate = eventStore.predicateForEventsWithStartDate(startDate, endDate: endDate,  calendars: [self.calendar])
-        return eventStore.eventsMatchingPredicate(predicate)as! [EKEvent]
+        return eventStore.eventsMatchingPredicate(predicate)
     }
     
     private func workedHoursByArrayIndex(let index: Int ) -> Double {

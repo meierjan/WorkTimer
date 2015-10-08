@@ -18,18 +18,17 @@ class ViewController: UITableViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        eventStore.requestAccessToEntityType(EKEntityTypeEvent,
-            completion: {(granted: Bool, error:NSError!) in
-                if !granted {
-                    println("Access to store not granted")
-                }
-        })
+        eventStore.requestAccessToEntityType(EKEntityType.Event, completion: requestEventstoreCallback)
         self.setNavbarStyle()
+    }
+    
+    func requestEventstoreCallback(granted: Bool, error:NSError?){
+        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        var refreshControl = UIRefreshControl()
+        let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: Selector("refreshTableViewContent"), forControlEvents: UIControlEvents.ValueChanged)
         self.refreshControl = refreshControl
     }
@@ -52,7 +51,7 @@ class ViewController: UITableViewController
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("DataCell") as! UITableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("DataCell")!
         let (_,parentItem) = model.eventWeekByArrayIndex(indexPath.section)
         let  item = parentItem![indexPath.row]
         cell.textLabel?.text =  item.title
@@ -83,7 +82,7 @@ class ViewController: UITableViewController
         let indexPath = sender?.indexPath
         if let segueName = sender?.identifier {
             switch segueName {
-                case "showDateDetail":
+                case "showDateDetail"?:
                     let destinationViewController = segue.destinationViewController as! DateDetailViewController
                     let (_,parentItem) = model.eventWeekByArrayIndex(indexPath!.section)
                     let  item = parentItem![indexPath!.row]

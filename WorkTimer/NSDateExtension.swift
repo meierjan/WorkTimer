@@ -14,10 +14,7 @@ extension NSDate {
     var weekNumber : Int {
         let calender = NSCalendar.currentCalendar()
         let dateComponent = calender.components(
-            NSCalendarUnit.CalendarUnitWeekOfYear  |
-                NSCalendarUnit.CalendarUnitDay  |
-                NSCalendarUnit.CalendarUnitMonth  |
-                NSCalendarUnit.CalendarUnitYear,
+            [NSCalendarUnit.WeekOfYear, NSCalendarUnit.Day, NSCalendarUnit.Month, NSCalendarUnit.Year],
             fromDate:self)
         return dateComponent.weekOfYear
     }
